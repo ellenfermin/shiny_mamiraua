@@ -1,2 +1,0 @@
-# shiny_mamiraua
-Protótipo
