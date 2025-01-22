@@ -1,4 +1,4 @@
-
+rm(list = ls())
 # Carregar pacotes necessários
 library(shiny)
 library(sf)
@@ -14,7 +14,7 @@ dir()
 # Carregar os dados de queimadas e raster usando caminhos relativos
 burn_data <- st_read("amz_public.shp")  # Caminho relativo ###testar novos dados diminuidos...
 jaguar_raster <- raster("jaguar_prob.tif")  # Caminho relativo
-
+dir()
 
 # Pre-processamento dos dados
 burn_data$VIEW_DATE <- as.Date(burn_data$VIEW_DATE)
@@ -62,5 +62,6 @@ runApp("C:/Users/ellen/Desktop/mamiraua/shiny")
 
 # Para deploy em ShinyApps.io, use:
 rsconnect::deployApp("C:/Users/ellen/Desktop/mamiraua/shiny")
+
 
 
